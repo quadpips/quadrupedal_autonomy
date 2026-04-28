@@ -1,7 +1,0 @@
-dt      1.0 ;
-
-motionList
-{
-    [0] walking
-    [1] demo_motion
-}

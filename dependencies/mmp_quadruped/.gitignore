@@ -1,9 +1,0 @@
-/.idea/
-/cmake-build-debug/
-/cmake-build-debug-docker/
-/.vscode/
-/stats/
-/scripts/__pycache__/
-*.bag
-/doc/
-/bags/
