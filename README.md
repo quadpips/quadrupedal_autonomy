@@ -125,7 +125,8 @@ ros2 run legged_twist_publisher legged_twist_publisher
 Then, you can use WASD to translate, Q/E to rotate, and X to send a zero velocity commands. Z will exit the node, so only press this when you are done.
 
 TODOs
-- [ ] Install from scratch
+- [x] Install from scratch
+- [ ] Tune for Go2
 - [ ] Sanity check inekf kinematics
 - [ ] Build proxsuite inside pixi
 - [ ] Add ANYmal

@@ -9,7 +9,7 @@
 [submodule "dependencies/realsense_gazebo_plugin"]
 	path = dependencies/realsense_gazebo_plugin
 	url = https://github.com/quadpips/realsense_gazebo_plugin.git
-	branch = humble-devel
+	branch = foxy-devel
 [submodule "dependencies/elevation_mapping_cupy"]
 	path = dependencies/elevation_mapping_cupy
 	url = https://github.com/quadpips/elevation_mapping_cupy.git
