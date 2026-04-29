@@ -7,7 +7,7 @@
 </p>
 
 <p>
-    <img align="center" width="350" src="./assets/stairs.gif" alt="empty"> 
+    <img align="center" width="375" src="./assets/stairs.gif" alt="empty"> 
     <img align="center" width="450" src="./assets/stones.gif" alt="empty"> 
 </p>
 
