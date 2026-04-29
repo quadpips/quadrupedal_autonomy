@@ -51,6 +51,7 @@ ros-humble-controller-manager="*"
 ros-humble-ros2-control="*"
 ros-humble-ros2-controllers="*"
 ros-humble-nav2-msgs="*"
+ros-humble-point-cloud-transport = ">=1.0.21,<2"
 
 [environments]
 # solve-group is meant to be sure that for common
