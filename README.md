@@ -7,8 +7,8 @@
 </p>
 
 <p>
-    <img align="center" width="450" src="./assets/stairs.gif" alt="empty"> 
-    <img align="center" width="530" src="./assets/stones.gif" alt="empty"> 
+    <img align="center" width="350" src="./assets/stairs.gif" alt="empty"> 
+    <img align="center" width="450" src="./assets/stones.gif" alt="empty"> 
 </p>
 
 <p>
