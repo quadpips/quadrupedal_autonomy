@@ -17,7 +17,7 @@ def generate_launch_description():
 
     go2_description_path = get_package_share_directory("go2_description")
     go2_interface_path = get_package_share_directory("go2_interface")
-    mmp_quadruped_path = get_package_share_directory("mmp_quadruped")
+    quad_pips_path = get_package_share_directory("quad_pips")
 
     ####################
     # Launch Arguments #
@@ -25,9 +25,9 @@ def generate_launch_description():
     urdfFile = os.path.join(go2_description_path, "urdf/go2_payload.urdf")
     frameFile = os.path.join(go2_interface_path, "config/frame_declaration.info")
 
-    taskFile = os.path.join(mmp_quadruped_path, "config/mpc/task.info")
-    sqpFile = os.path.join(mmp_quadruped_path, "config/mpc/sqp.info")
-    controllerConfigFile = os.path.join(mmp_quadruped_path, "config/wbc/wbc.info")
+    taskFile = os.path.join(quad_pips_path, "config/mpc/task.info")
+    sqpFile = os.path.join(quad_pips_path, "config/mpc/sqp.info")
+    controllerConfigFile = os.path.join(quad_pips_path, "config/wbc/wbc.info")
 
     use_force_sensor = False
     contact_threshold = 0

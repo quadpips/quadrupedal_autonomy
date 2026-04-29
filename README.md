@@ -50,7 +50,7 @@ This framework runs on ROS2 Humble. We provide installation through [pixi](https
 
     # Install QuadPiPS
     mkdir -p ~/quadpips_ws/src && cd ~/quadpips/src
-    git clone https://github.gatech.edu/GeorgiaTechLIDARGroup/legged_software.git --branch pixi --recursive && cd legged_autonomy
+    git clone https://github.com/quadpips/quad_auto.git --branch main --recursive && cd quad_auto
     git lfs pull
     pixi install && pixi shell
     just fresh-build
@@ -61,7 +61,7 @@ This framework runs on ROS2 Humble. We provide installation through [pixi](https
     First, ensure that ROS2 uses cyclonedds for its RMW configuration:
     ```bash
     echo export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp >> ~/.bashrc
-    echo export CYCLONEDDS_URI=~/quadpips_ws/src/legged_software/cyclonedds.xml >> ~/.bashrc
+    echo export CYCLONEDDS_URI=~/quadpips_ws/src/quad_auto/cyclonedds.xml >> ~/.bashrc
     source ~/.bashrc
     ```
 

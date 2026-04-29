@@ -19,7 +19,7 @@ def generate_launch_description():
     #######################
 
     go2_description_path = get_package_share_directory("go2_description")
-    mmp_quadruped_path = get_package_share_directory("mmp_quadruped")
+    quad_pips_path = get_package_share_directory("quad_pips")
     go2_gazebo_path = get_package_share_directory("go2_gazebo")
     launch_dir = os.path.join(go2_description_path, "launch")
     gazebo_config_path = os.path.join(go2_gazebo_path, "config/gazebo.yaml")
@@ -35,7 +35,7 @@ def generate_launch_description():
     ld = launch.LaunchDescription([
         launch_ros.actions.SetParameter(name='use_sim_time', value=True),
         DeclareLaunchArgument(
-            "world", default_value=os.path.join(mmp_quadruped_path, "worlds/" + env_prefix + ".world"), description="Gazebo world name"
+            "world", default_value=os.path.join(quad_pips_path, "worlds/" + env_prefix + ".world"), description="Gazebo world name"
         ),
         DeclareLaunchArgument(
             "use_sim_time", default_value="true", description="Use simulation (Gazebo) clock if true"
