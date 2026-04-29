@@ -1,0 +1,48 @@
+[submodule "dependencies/quad_pips"]
+	path = dependencies/quad_pips
+	url = https://github.com/quadpips/quad_pips.git
+	branch = main
+[submodule "dependencies/superpixels"]
+	path = dependencies/superpixels
+	url = https://github.com/quadpips/superpixels.git
+	branch = quadpips
+[submodule "dependencies/realsense_gazebo_plugin"]
+	path = dependencies/realsense_gazebo_plugin
+	url = https://github.com/quadpips/realsense_gazebo_plugin.git
+	branch = humble-devel
+[submodule "dependencies/elevation_mapping_cupy"]
+	path = dependencies/elevation_mapping_cupy
+	url = https://github.com/quadpips/elevation_mapping_cupy.git
+	branch = ros2
+[submodule "dependencies/ocs2_robotic_assets"]
+	path = dependencies/ocs2_robotic_assets
+	url = https://github.com/quadpips/ocs2_robotic_assets.git
+	branch = quadpips
+[submodule "dependencies/ocs2"]
+	path = dependencies/ocs2
+	url = https://github.com/quadpips/ocs2.git
+	branch = quadpips
+[submodule "dependencies/grid_map"]
+	path = dependencies/grid_map
+	url = https://github.com/quadpips/grid_map.git
+	branch = quadpips
+[submodule "dependencies/gazebo_ros2_control"]
+	path = dependencies/gazebo_ros2_control
+	url = https://github.com/quadpips/gazebo_ros2_control.git
+	branch = humble
+[submodule "dependencies/gazebo_ros_pkgs"]
+	path = dependencies/gazebo_ros_pkgs
+	url = https://github.com/quadpips/gazebo_ros_pkgs.git
+	branch = quadpips
+[submodule "dependencies/egocylindrical_msgs"]
+	path = dependencies/egocylindrical_msgs
+	url = https://github.com/quadpips/egocylindrical_msgs.git
+	branch = ros2_humble
+[submodule "dependencies/egocylindrical"]
+	path = dependencies/egocylindrical
+	url = https://github.com/quadpips/egocylindrical.git
+	branch = quadpips
+[submodule "dependencies/depth_img_normal_estimation"]
+	path = dependencies/depth_img_normal_estimation
+	url = https://github.com/quadpips/depth_img_normal_estimation.git
+	branch = ros2_humble
