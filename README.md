@@ -3,7 +3,7 @@
 <p align="center">
     <a href="https://arxiv.org/abs/2501.00112">arXiv</a> •
     <a href="https://google.com">Website</a> •
-    <a href="##Citation">Citation</a>
+    <a href="#citation">Citation</a>
 </p>
 
 <p>
@@ -18,6 +18,8 @@
 ## Introduction
 
 This repository is built upon the [Cheetah-Software](https://github.com/mit-biomimetics/Cheetah-Software), but allows more convenient integration with other ROS2 packages such as OCS2 or other perception modules. Right now, this repository only supports the Unitree Go2 quadruped platform.
+
+If you find this repository useful, please leave a star! If you have any comments/questions/concerns, please leave an issue! I will try to respond to it as soon as I can. Feel free to contact me at mass@gatech.edu for any offline conversations.
 
 ## Dependencies
 
@@ -35,7 +37,7 @@ This framework runs on ROS2 Humble. We provide installation through [pixi](https
 1. Install proxsuite as a QP solver for WBC:
     ```bash
     cd ~/
-    git clone --recurse-submodules https://github.gatech.edu/GeorgiaTechLIDARGroup/proxsuite.git
+    git clone --branch quadpips --recurse-submodules https://github.com/quadpips/proxsuite.git
     cd proxsuite
     mkdir build && cd build
     cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DBUILD_WITH_VECTORIZATION_SUPPORT=OFF
@@ -43,7 +45,7 @@ This framework runs on ROS2 Humble. We provide installation through [pixi](https
     sudo make install
     ```
 
-2. Now you can build the `go2_interface` package. First, set up the pixi virtual environment.
+2. Now you can build our workspace! First, set up the pixi virtual environment.
     ```bash
     # Install pixi
     curl -fsSL https://pixi.sh/install.sh | sh # You might have to source your config again
@@ -124,7 +126,9 @@ ros2 run legged_twist_publisher legged_twist_publisher
 
 Then, you can use WASD to translate, Q/E to rotate, and X to send a zero velocity commands. Z will exit the node, so only press this when you are done.
 
-TODOs
+### QuadPiPS (Autonomous Foothold Planning)
+
+## TODOs
 - [x] Install from scratch
 - [ ] Tune for Go2
 - [ ] Sanity check inekf kinematics
@@ -134,7 +138,30 @@ TODOs
 - [ ] MuJoCo sim
 - [ ] Add Nav2 demo
 - [ ] Add OCS2 for G1
+- [ ] Handheld controller for sim
 
 ## Acknowledgements
 
-## Citation
+<ul>
+    <li>We based some of our setup and installation on the <a href="https://github.com/tbai-lab/tbai" target="_blank">tbai-lab</a> codebase, they are another great resource if you are spinning up your locomotion stack </li>
+    <li>legged_control <a href="https://github.com/qiayuanl/legged_control/" target="_blank">codebase</a></li>
+    <li>legged_perceptive <a href="https://github.com/qiayuanl/legged_perceptive" target="_blank">codebase</a></li>
+    <li>invariant-ekf <a href="https://github.com/RossHartley/invariant-ekf" target="_blank">codebase</a></li>
+    <li>pinocchio <a href="https://github.com/stack-of-tasks/pinocchio" target="_blank">codebase</a></li>
+    <li>elevation_mapping_cupy <a href="https://github.com/leggedrobotics/elevation_mapping_cupy" target="_blank">codebase</a></li>
+    <li>OCS2 <a href="https://github.com/leggedrobotics/ocs2" target="_blank">codebase</a></li>
+</ul>
+
+## <a name="Citation"></a>Citation
+If would like to cite this work, please use the following format:
+```
+@misc{asselmeier2026quadpipsperceptioninformedfootstepplanner,
+      title={QuadPiPS: A Perception-informed Footstep Planner for Quadrupeds With Semantic Affordance Prediction}, 
+      author={Max Asselmeier and Ye Zhao and Patricio A. Vela},
+      year={2026},
+      eprint={2501.00112},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2501.00112}, 
+}
+```
