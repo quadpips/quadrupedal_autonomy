@@ -18,22 +18,10 @@ set(dependencies
   sensor_msgs
 )
 
-link_directories(
-  ${GAZEBO_LIBRARY_DIRS}
-)
-
-add_executable(go2_foot_contact_sensor src/FootContactSensor.cpp)
-target_link_libraries(go2_foot_contact_sensor ${GAZEBO_LIBRARIES})
-ament_target_dependencies(go2_foot_contact_sensor ${dependencies})
 
 #############
 ## Install ##
 #############
-
-install(TARGETS 
-  go2_foot_contact_sensor
-    DESTINATION lib/${PROJECT_NAME}
-)
 
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})

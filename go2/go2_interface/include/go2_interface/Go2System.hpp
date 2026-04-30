@@ -12,7 +12,7 @@
 
 // Go2-specific classes
 #include <go2_system/state_machine/ControlFSM.h>
-#include <go2_system/controllers/auxillary/LegController.h>
+#include <go2_system/controllers/LegController.h>
 
 // ROS2
 #include <ament_index_cpp/get_package_share_directory.hpp>

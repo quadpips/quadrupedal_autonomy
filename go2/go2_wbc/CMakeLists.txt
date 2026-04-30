@@ -45,13 +45,13 @@ include_directories(
 
 # Source files
 set(SOURCES
-  src/PerceptiveLocomotionOCS2WBC/Factory.cpp
-  src/PerceptiveLocomotionOCS2WBC/HqpSolver.cpp
-  src/PerceptiveLocomotionOCS2WBC/HqpWbc.cpp
-  src/PerceptiveLocomotionOCS2WBC/SqpSolver.cpp
-  src/PerceptiveLocomotionOCS2WBC/SqpWbc.cpp
-  src/PerceptiveLocomotionOCS2WBC/Task.cpp
-  src/PerceptiveLocomotionOCS2WBC/WbcBase.cpp
+  src/Factory.cpp
+  src/HqpSolver.cpp
+  src/HqpWbc.cpp
+  src/SqpSolver.cpp
+  src/SqpWbc.cpp
+  src/Task.cpp
+  src/WbcBase.cpp
 )
 
 # Build the library

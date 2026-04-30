@@ -22,7 +22,7 @@ def generate_launch_description():
     ####################
     # Launch Arguments #
     ####################
-    urdfFile = os.path.join(go2_description_path, "urdf/go2_payload.urdf")
+    urdfFile = os.path.join(go2_description_path, "urdf/go2_description.urdf")
     frameFile = os.path.join(go2_interface_path, "config/frame_declaration.info")
 
     taskFile = os.path.join(quad_pips_path, "config/mpc/task.info")
@@ -65,7 +65,7 @@ def generate_launch_description():
             arguments=[
                 "-d",
                 os.path.join(
-                    go2_interface_path, "rviz", "go2_mmp.rviz",
+                    go2_interface_path, "rviz", "go2_quadpips.rviz",
                 )
             ],
             parameters=[
@@ -94,59 +94,7 @@ def generate_launch_description():
                     "use_sim_time": LaunchConfiguration("use_sim_time"),
                 }
             ]
-        ),
-        launch_ros.actions.Node(
-            package="tf2_ros",
-            executable="static_transform_publisher",
-            name="base_to_base_footprint_tf2",
-            output="screen",
-            arguments=[
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "0",
-                "base",
-                "base_footprint"
-            ],
-            parameters=[
-                {
-                    "use_sim_time": LaunchConfiguration("use_sim_time"),
-                }
-            ]
-        ),
-        # launch_ros.actions.Node(
-        #     package="go2_interface",
-        #     executable="base_aligned_broadcaster",
-        #     name="base_aligned_broadcaster",
-        #     output="screen",
-        #     # prefix="gnome-terminal --",
-        #     parameters=[
-        #         {
-        #             "use_sim_time": LaunchConfiguration("use_sim_time"),
-        #         }
-        #     ]
-        # )
-        # launch_ros.actions.Node(
-        #     package='ocs2_go2_commands',
-        #     executable='cmd_vel_scorer_node',
-        #     name='cmd_vel_scorer_node',
-        #     output='log',
-        #     # prefix="gnome-terminal --",
-        # ),     
-        # launch_ros.actions.Node(
-        #     package='plotjuggler',
-        #     executable='plotjuggler',
-        #     name='plotjuggler',
-        #     output='log',
-        #     # prefix="gnome-terminal --",
-        # ),                 
-        # launch_ros.actions.Node(
-        #     package='go2_interface',
-        #     executable='base_footprint_publisher',
-        #     output='screen',
-        # ),        
+        )      
     ])
 
     return ld

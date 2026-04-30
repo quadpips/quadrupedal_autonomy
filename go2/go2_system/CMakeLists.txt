@@ -43,7 +43,7 @@ include_directories(include
 )
 
 add_library(${PROJECT_NAME} 
-        src/controllers/auxillary/LegController.cpp
+        src/controllers/LegController.cpp
         src/state_machine/ControlFSM.cpp
         src/state_machine/FSM_State_Passive.cpp
         src/state_machine/FSM_State_PerceptiveLocomotionOCS2.cpp

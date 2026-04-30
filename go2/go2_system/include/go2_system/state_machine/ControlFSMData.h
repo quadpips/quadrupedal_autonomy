@@ -2,7 +2,7 @@
 
 #include <legged_common/control/ctrl_utils/QuadrupedParameters.h>
 #include <legged_common/control/ctrl_utils/HighCmd.h>
-#include "go2_system/controllers/auxillary/LegController.h"
+#include "go2_system/controllers/LegController.h"
 #include <go2_estimators/estimators/StateEstimatorContainer.h>
 
 namespace legged_software {

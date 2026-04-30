@@ -31,5 +31,3 @@ unitree_joint_controller:
         - effort
       state_interfaces:
         - position
-
-      urdf_file_path: "/home/unitree/ros2_ws/src/legged_software/legged_descriptions/go2_description/urdf/go2_description.urdf"

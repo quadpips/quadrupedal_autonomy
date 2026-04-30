@@ -24,13 +24,18 @@
 // Unitree
 #include "unitree_go/msg/low_cmd.hpp"
 #include "unitree_go/msg/low_state.hpp"
-#include "go2_interface/unitree_ros2/common/motor_crc.h"
+// #include "go2_interface/unitree_ros2/common/motor_crc.h"
 
 // Type aliases
 using GO2CmdRequest = go2_interface_msgs::srv::GO2Cmd::Request;
 using GO2CmdResponse = go2_interface_msgs::srv::GO2Cmd::Response;
 using CheaterModeRequest = go2_interface_msgs::srv::CheaterMode::Request;
 using CheaterModeResponse = go2_interface_msgs::srv::CheaterMode::Response;
+
+
+#define PMSM (0x01)
+#define PosStopF  (2.146E+9f)
+#define VelStopF  (16000.0f)
 
 namespace legged_software {
 namespace go2_interface {
@@ -246,7 +251,7 @@ class Go2Bridge
 
             for (int i = 0; i < 20; i++) 
             {
-                low_cmd.motor_cmd[i].mode = (0x01);  // motor switch to servo (PMSM) mode
+                low_cmd.motor_cmd[i].mode = PMSM;  // motor switch to servo (PMSM) mode
                 low_cmd.motor_cmd[i].q = (PosStopF);
                 low_cmd.motor_cmd[i].kp = (0);
                 low_cmd.motor_cmd[i].dq = (VelStopF);

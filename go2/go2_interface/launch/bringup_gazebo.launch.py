@@ -21,7 +21,7 @@ def generate_launch_description():
     ####################
     # Launch Arguments #
     ####################
-    urdfFile = os.path.join(go2_description_path, "urdf/go2_payload.urdf")
+    urdfFile = os.path.join(go2_description_path, "urdf/go2_description.urdf")
     taskFile = os.path.join(go2_interface_path, "config/task.info")
     frameFile = os.path.join(go2_interface_path, "config/frame_declaration.info")
     sqpFile = os.path.join(go2_interface_path, "config/sqp.info")
@@ -105,7 +105,7 @@ def generate_launch_description():
             arguments=[
                 "-d",
                 os.path.join(
-                    go2_interface_path, "rviz", "go2_humble.rviz",
+                    go2_interface_path, "rviz", "go2.rviz",
                 )
             ],
             parameters=[

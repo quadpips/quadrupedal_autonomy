@@ -4,8 +4,8 @@
 #include <angles/angles.h>
 
 // legged modules
-#include <go2_wbc/PerceptiveLocomotionOCS2WBC/WbcBase.hpp>
-#include <go2_wbc/PerceptiveLocomotionOCS2WBC/Factory.hpp>
+#include <go2_wbc/WbcBase.hpp>
+#include <go2_wbc/Factory.hpp>
 
 // go2 modules
 #include <go2_system/state_machine/FSM_State.h>
